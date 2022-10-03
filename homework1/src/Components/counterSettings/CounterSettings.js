@@ -4,11 +4,7 @@ export default class CounterSettings extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    this.setState({
-      ...JSON.parse(localStorage.getItem("state")),
-    });
-  }
+
   render() {
     const { count, maxValue, minValue, step } = this.props;
     const disableAdd = count + step > maxValue ? true : false;
